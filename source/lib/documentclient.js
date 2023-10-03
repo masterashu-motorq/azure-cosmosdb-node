@@ -1947,7 +1947,7 @@ var DocumentClient = Base.defineClass(
             if (!callback && !options) {
                 callback = params;
                 params = null;
-                options = {}
+                options = {};
             }
             else if (!callback) {
                 callback = options;
@@ -2166,7 +2166,7 @@ var DocumentClient = Base.defineClass(
                 var isNameBased = Base.isLinkNameBased(collectionLink);
                 var path = that.getPathFromLink(collectionLink, "docs", isNameBased);
                 var id = that.getIdFromLink(collectionLink, isNameBased);
-
+                var partitionKeyRangeId = options.partitionKeyRangeId;
                 return function (options, callback) {
                     that.queryFeed.call(that,
                     that,
@@ -2177,7 +2177,8 @@ var DocumentClient = Base.defineClass(
                     function (parent, body) { return body; },
                     query,
                     options,
-                    callback);
+                    callback,
+                    partitionKeyRangeId);
                 };
             });
 
@@ -2558,7 +2559,7 @@ var DocumentClient = Base.defineClass(
         /** Gets the SessionToken for a given collectionLink
          * @memberof DocumentClient
          * @instance
-         * @param collectionLink              - The link of the collection for which the session token is needed 
+         * @param collectionLink              - The link of the collection for which the session token is needed
         */
         getSessionToken: function (collectionLink) {
             if (!collectionLink)

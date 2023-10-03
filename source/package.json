@@ -1,5 +1,5 @@
 {
-  "name": "documentdb",
+  "name": "motorq-documentdb",
   "description": "Azure Cosmos DB Service Node.js SDK for SQL API",
   "keywords": [
     "cosmosdb",
@@ -11,8 +11,8 @@
     "database",
     "cloud"
   ],
-  "version": "1.15.3",
-  "author": "Microsoft Corporation",
+  "version": "1.15.4",
+  "author": "Ashutosh Chauhan",
   "main": "./index.js",
   "engine": {
     "node": ">=0.8"
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Azure/azure-documentdb-node"
+    "url": "https://github.com/masterashu-motorq/azure-cosmosdb-node"
   },
   "license": "MIT"
 }
