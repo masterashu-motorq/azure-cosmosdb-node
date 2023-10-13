@@ -223,7 +223,7 @@ var RequestHandler = {
         requestOptions.path = path;
         requestOptions.headers = headers;
         requestOptions.agent = requestAgent;
-        requestOptions.secureProtocol = "TLSv1_client_method";
+        requestOptions.secureProtocol = "TLSv1_2_client_method";
 
         if (connectionPolicy.DisableSSLVerification === true) {
             requestOptions.rejectUnauthorized = false;
